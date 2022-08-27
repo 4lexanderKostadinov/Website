@@ -91,8 +91,8 @@
         width: 100%;
         position: absolute;
         top: 80px;
-        /* left: -100%;
-        opacity: 0; */
+        left: -100%;
+        opacity: 0;
         transition: all 0.5s ease;
     }
 
@@ -132,14 +132,6 @@
         transition: all 0.4s ease-out;
     }
 
-    .nav-links-btn:hover {
-        border: none;
-        padding: 0;
-        border-radius: 0;
-        background-color: var(--brighred);
-        transition: all 0.4s ease-out;
-    }
-
     #mobile-menu {
         position: absolute;
         top: 20%;
@@ -150,5 +142,20 @@
     .menu-toggle .bar {
         display: block;
         cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
     }
 }
